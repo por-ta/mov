@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <h3 class="heading"> video gallery </h3>
+    
+    <div class="container">
+
+        <div class="main-video">
+
+            <div class="video">
+                <iframe src="https://drive.google.com/file/d/1bCNkwIlj0s6QCBXOamIgvdaNTrlbMz4A/preview" width="900" height="480" allow="autoplay"></iframe>
+                <h3 class="title">01 cyberpunk</h3>   
+            </div>
+
+        </div>
+
+        <div class="video-list">
+            <div class="vid active">
+                <video src="Cyberpunk Edgerunners.mp4" controls></video>
+                <h3 class="title">02 cyberpunk</h3>
+            </div>
+            <div class="vid">
+                <video src="Cyberpunk Edgerunners.mp4" controls></video>
+                <h3 class="title">03 cyberpunk</h3>
+            </div>
+            <div class="vid">
+                <video src="Cyberpunk Edgerunners.mp4" controls></video>
+                <h3 class="title">4 cyberpunk</h3>
+            </div>
+            <div class="vid">
+                <video src="Cyberpunk Edgerunners.mp4" controls></video>
+                <h3 class="title">5 cyberpunk</h3>
+            </div>
+            <div class="vid">
+                <video src="Cyberpunk Edgerunners.mp4" controls></video>
+                <h3 class="title">6 cyberpunk</h3>
+            </div>
+            <div class="vid">
+                <video src="Cyberpunk Edgerunners.mp4" controls></video>
+                <h3 class="title">7 cyberpunk</h3>
+            </div>
+            <div class="vid">
+                <video src="Cyberpunk Edgerunners.mp4" controls></video>
+                <h3 class="title">8 cyberpunk</h3>
+            </div>
+            <div class="vid">
+                <video src="Cyberpunk Edgerunners.mp4" controls></video>
+                <h3 class="title">9 cyberpunk</h3>
+            </div>
+        </div>
+
+    </div>
+
+<script>
+
+let listVideo = document.querySelectorAll('.video-list .vid');
+let mainVideo = document.querySelectorAlll('.main-video video');
+let title = document.querySelectorAll('.main-video .title');
+
+listVideo.forEach(video =>{
+    video.onclick = () =>{
+        listVideo.forEach (vid => vid.classList.remove('active'));
+        video.classList.add('active');
+        if(video.classList.contains('active')){
+            let src = video.children [0].getAttribute ('src');
+            mainVideo.src = src;
+            let text = video.children [1].innerHTML;
+            title.innerHTML = text;
+
+        };
+    };
+});
+
+</script>
+
+
+</body>
+</html>
